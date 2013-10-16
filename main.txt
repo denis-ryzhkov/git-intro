@@ -23,7 +23,7 @@ and full version tracking capabilities, not dependent on network access or a cen
 Explain:
 
 * Working copy.
-* Index.
+* Index aka Stage.
 * Commit.
 * Remote.
 
@@ -81,6 +81,7 @@ git add index.html
 git status
 # git checkout -- file
 git diff
+git diff --staged
 git commit -am 'See #1: Prototype of Facebook v42.'
 git push
 
@@ -150,6 +151,7 @@ Rebase
 
 gl
 git rebase -i e4b6e03ff91384df2bc7e09737b6f3a26a362c61
+# pick, reword, squash, etc.
 # OR
 git rebase e4b6e03ff91384df2bc7e09737b6f3a26a362c61
 # Fix conflicts.
@@ -186,11 +188,13 @@ git commit -am 'Fixed...'
 git reset --hard e4b6e03ff91384df2bc7e09737b6f3a26a362c61
 git push -f origin feature
 
-Patches
-=======
+Patch, Cherry-Pick
+==================
 
 git diff > patch.diff
 git apply patch.diff
+
+git cherry-pick e4b6e03ff91384df2bc7e09737b6f3a26a362c61
 
 Tags
 ====
@@ -204,7 +208,7 @@ GitFlow
 http://nvie.com/posts/a-successful-git-branching-model/
 
 
-git-intro version 0.1.0  
+git-intro version 0.1.1  
 https://github.com/denis-ryzhkov/git-intro  
 Copyright (C) 2013 by Denis Ryzhkov <denisr@denisr.com>  
 MIT License, see http://opensource.org/licenses/MIT
