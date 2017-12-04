@@ -83,6 +83,7 @@ Update code from local to remote
     git status
     # git checkout -- file
     git diff
+    git diff --color-words
     git diff --staged
     git commit -am 'See #1: Prototype of Facebook v42.'
     git push
